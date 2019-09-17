@@ -31,4 +31,12 @@ public class Role {
         this.person = person;
         this.movie = movie;
     }
+
+    public void addRoleName(String name) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+
+        this.roles.add(name);
+    }
 }
