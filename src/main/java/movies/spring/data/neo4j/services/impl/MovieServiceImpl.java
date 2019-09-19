@@ -1,23 +1,21 @@
-package java.movies.spring.data.neo4j.services.impl;
+package movies.spring.data.neo4j.services.impl;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import movies.spring.data.neo4j.domain.Movie;
+import movies.spring.data.neo4j.domain.Role;
+import movies.spring.data.neo4j.repositories.MovieRepository;
+import movies.spring.data.neo4j.services.MovieService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import sun.applet.resources.MsgAppletViewer;
 
-import java.movies.spring.data.neo4j.domain.Movie;
-import java.movies.spring.data.neo4j.domain.Role;
-import java.movies.spring.data.neo4j.repositories.MovieRepository;
-import java.movies.spring.data.neo4j.services.MovieService;
 import java.util.*;
 
-@Slf4j
+
 @Service
 public class MovieServiceImpl implements MovieService {
+
+    private final static Logger LOG = LoggerFactory.getLogger(MovieService.class);
 
     private final MovieRepository movieRepository;
 

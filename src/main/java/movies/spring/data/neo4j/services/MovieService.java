@@ -1,6 +1,7 @@
-package java.movies.spring.data.neo4j.services;
+package movies.spring.data.neo4j.services;
 
-import java.movies.spring.data.neo4j.domain.Movie;
+import movies.spring.data.neo4j.domain.Movie;
+
 import java.util.Collection;
 import java.util.Map;
 
